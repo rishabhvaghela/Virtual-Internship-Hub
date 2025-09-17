@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Virtual Internship Hub</title>
+    <style>
+        /* ===== GLOBAL STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features {
+            padding: 50px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card h3 {
+            color: #6e8efb;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: #555;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 60px 20px;
+            margin: 50px 0;
+            border-radius: 20px;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .step {
+            background: white;
+            width: 200px;
+            padding: 25px 15px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #a777e3;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* ===== BUTTON ===== */
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff5252;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .step {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Virtual Internship Hub</h1>
+            <p>Bridge the gap between learning and earning — with AI-powered virtual internships, mentorship, and
+                real-time certifications.</p>
+            <a href="index.html" class="btn">← Go Back to Home</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">✨ Unique Features</h2>
+            <div class="features-grid">
+
+                <div class="feature-card">
+                    <h3>🤖 AI Skill Suggestions</h3>
+                    <p>Based on your test results, our AI recommends the best-fit internships for your profile —
+                        personalized just for you!</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>👩‍🏫 Live Mentorship</h3>
+                    <p>Chat or video call with industry experts. Clear doubts, get guidance, and grow with regular live
+                        sessions.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📄 Auto Resume Builder</h3>
+                    <p>Your internship performance auto-generates a professional resume. Download, edit, and apply
+                        anywhere — in one click.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💼 Direct Company Connect</h3>
+                    <p>Top scorers get direct access to recruiters. Turn your internship into a job offer with our
+                        exclusive network.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>⏱️ Real-time Certificates</h3>
+                    <p>Finish a test? Get instant results + downloadable PDF certificate. No waiting. Just achievement.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🔒 Secure & Scalable</h3>
+                    <p>Built with security-first approach — password hashing, session management, and scalable
+                        architecture for lakhs of users.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">🚀 How It Works</h2>
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Sign Up</h3>
+                    <p>Create your free account in 30 seconds.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Take Skill Test</h3>
+                    <p>Assess your current skills with our smart quiz.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get AI Match</h3>
+                    <p>AI suggests best internships for you.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Build Resume</h3>
+                    <p>Auto-generate & download your professional resume.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Virtual Internship Hub — Empowering Students, One Internship at a Time.</p>
+            <p>Created with ❤️ for academic purposes. <a href="index.html">Back to Home</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
