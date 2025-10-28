@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Online Internship</title>
+  <link rel="icon" type="image/png" href="Web Icon.png" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      position: relative;
+    }
+
+.back-btn{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: red;
+    padding: 5px 5px 0 5px;
+}
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    header {
+      background: #4361ee;
+      color: white;
+      padding: 1.5rem 2rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    .form-container {
+      padding: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    input[readonly] {
+      background-color: #f1f3f5;
+      color: #495057;
+    }
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    .btn {
+      background: #4361ee;
+      color: white;
+      border: none;
+      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #3a56e4;
+    }
+    .row {
+      display: flex;
+      gap: 1rem;
+    }
+    .row .form-group {
+      flex: 1;
+    }
+    @media (max-width: 600px) {
+      .row {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      body {
+        padding: 1rem;
+      }
+      .container{
+        margin: 0 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+        <!-- Dynamic Back Button -->
+    <a id="backLink" class="back-btn" href="company_dashboard.html">
+        <img src="cancel.svg" alt="">
+    </a>
+
+  <div class="container">
+    <header>
+      <h1>Post an Online Internship</h1>
+    </header>
+
+    <div class="form-container">
+      <form id="postInternshipForm" >
+        <!-- Hidden field to enforce remote -->
+        <input type="hidden" name="type" value="Remote" />
+
+        <div class="form-group">
+          <label for="title">Internship Title *</label>
+          <input type="text" id="title" name="title" required placeholder="e.g., Frontend Developer Intern" />
+        </div>
+
+        <div class="form-group">
+          <label for="department">Department</label>
+          <input type="text" id="department" name="department" placeholder="e.g., Engineering, Marketing" />
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location (City/Country for time zone reference)</label>
+          <input type="text" id="location" name="location" placeholder="e.g., India, USA (Remote)" />
+        </div>
+
+        <div class="form-group">
+          <label>Internship Type</label>
+          <input type="text" value="Remote (Online Only)" readonly />
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <label for="startDate">Start Date *</label>
+            <input type="date" id="startDate" name="startDate" required />
+          </div>
+          <div class="form-group">
+            <label for="duration">Duration (in weeks) *</label>
+            <input type="number" id="duration" name="duration" min="4" max="24" required placeholder="e.g., 8" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="stipend">Stipend (per month)</label>
+          <input type="text" id="stipend" name="stipend" placeholder="e.g., ₹10,000 or 'Unpaid'" />
+        </div>
+
+        <div class="form-group">
+          <label for="skills">Required Skills (comma-separated)</label>
+          <input type="text" id="skills" name="skills" placeholder="e.g., HTML, CSS, JavaScript, React" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description *</label>
+          <textarea id="description" name="description" required placeholder="Describe the role, responsibilities, and what the intern will learn..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="applicationLink">Application Link (Optional)</label>
+          <input type="url" id="applicationLink" name="applicationLink" placeholder="https://yourcompany.com/apply" />
+        </div>
+
+        <button type="submit" class="btn">Post Internship</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('postInternshipForm').addEventListener('submit', function(e) {
+      // Optional: Replace alert with real API call later
+      e.preventDefault();
+      alert('✅ Online internship posted successfully!');
+      // You can submit via fetch() to your backend here
+    });
+  </script>
+</body>
+</html>
