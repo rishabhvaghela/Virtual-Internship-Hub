@@ -71,7 +71,7 @@
       <img src="https://img.icons8.com/color/96/student-male.png" alt="Internship">
       <h3>Web Development Internship</h3>
       <p>Learn and build real projects using HTML, CSS, and JavaScript.</p>
-      <a href="#" id="apply"><button>Apply Now</button></a>
+      <a href="#" class="apply"><button>Apply Now</button></a>
     </div>
 
     <!-- Card 2 -->
@@ -79,7 +79,7 @@
       <img src="https://img.icons8.com/color/96/company.png" alt="Internship">
       <h3>Software Testing Internship</h3>
       <p>Get hands-on experience in manual and automation testing.</p>
-      <a href="#" id="apply"><button>Apply Now</button></a>
+      <a href="#" class="apply"><button>Apply Now</button></a>
     </div>
 
     <!-- Card 3 -->
@@ -87,7 +87,7 @@
       <img src="https://img.icons8.com/color/96/business.png" alt="Internship">
       <h3>Digital Marketing Internship</h3>
       <p>Work on SEO, social media campaigns, and content strategies.</p>
-      <a href="#" id="apply"><button>Apply Now</button></a>
+      <a href="#" class="apply"><button>Apply Now</button></a>
     </div>
   </div>
 
@@ -99,19 +99,22 @@
 
 <script src="toggle.js"></script>
 <script>
-  let a = document.querySelector('#apply');
-  a.addEventListener("click", ()=>{
-    const result = confirm("Please Login Frist");
 
+const apply = document.querySelectorAll('.apply');
+
+apply.forEach(button => {
+  button.addEventListener("click", () => {
+    const result = confirm("Please login first");
     if (result) {
       window.location.href = "login.html";
     }
-     else {
-      
-        alert("Are You Sure?");
-      }
-  })
+    else{
+      alert("stay without login");
+    }
+  });
+});
 </script>
 </body>
+
 
 </html>
