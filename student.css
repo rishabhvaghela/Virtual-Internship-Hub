@@ -114,36 +114,6 @@
      cursor: pointer;
  }
 
- /* Mobile styles */
- @media (max-width: 770px) {
-     .menu {
-         display: none;
-         flex-direction: column;
-         background: #4f46e5;
-         position: absolute;
-         top: 56px;
-         right: 27px;
-         padding: 15px;
-         border-radius: 10px;
-     }
-
-     ul {
-         display: flex;
-         flex-direction: column;
-     }
-
-     .menu.active {
-         display: flex;
-     }
-
-     .toggle {
-         display: block;
-     }
- }
-
-
-
-
  /* Hero Section */
 
  .welcome {
@@ -280,21 +250,6 @@
      height: auto;
  }
 
- @media (max-width: 850px) {
-     .hero {
-         flex-direction: column;
-         /* stack on mobile */
-         text-align: center;
-         /* center text */
-     }
-
-     .hero img {
-         margin-top: 20px;
-         max-width: 100%;
-         /* fit mobile screen */
-     }
- }
-
  .h2 {
      text-align: center;
      font-size: 2.5rem;
@@ -418,3 +373,46 @@ table th{
 .view-btn1:hover {
   background: #0056b3;
 }
+
+
+ /* Mobile styles */
+ @media (max-width: 770px) {
+     .menu {
+         display: none;
+         flex-direction: column;
+         background: #4f46e5;
+         position: absolute;
+         top: 56px;
+         right: 27px;
+         padding: 15px;
+         border-radius: 10px;
+     }
+
+     ul {
+         display: flex;
+         flex-direction: column;
+     }
+
+     .menu.active {
+         display: flex;
+     }
+
+     .toggle {
+         display: block;
+     }
+ }
+
+  @media (max-width: 850px) {
+     .hero {
+         flex-direction: column;
+         /* stack on mobile */
+         text-align: center;
+         /* center text */
+     }
+
+     .hero img {
+         margin-top: 20px;
+         max-width: 100%;
+         /* fit mobile screen */
+     }
+ }
